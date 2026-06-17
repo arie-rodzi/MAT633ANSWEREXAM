@@ -68,24 +68,21 @@ ii) The combination of Algebraic product ($t_{ap}(a,b)=ab$) for fuzzy t-norm, Ei
 * **ii) Algebraic Product & Einstein Sum Layout:**
   $$\mu(x,y,z) = \frac{(1-\mu_X(x))\cdot\mu_Z(z) + (1-\mu_Y(y))}{1 + ((1-\mu_X(x))\cdot\mu_Z(z)\cdot(1-\mu_Y(y)))} \quad \text{`[M1, A1]`}$$"""
     },
-    {
+   {
         "question_no": "Question 2(c)",
         "topic": "Mamdani Relation for Cloudy and Dry",
         "marks": "6",
         "question": r"""Given fuzzy set 'cloudy' and 'dry' be defined by the following membership functions:
-$$\mu_{\text{cloudy}}(x)=\begin{cases}\frac{x-2}{3} &; 2\le x\le5\\ 1 &; 5 < x\le7\\ 0 &; \text{otherwise}\end{cases}$$
-$$\mu_{\text{dry}}(y)=\begin{cases}1 &; 0 \le y \le 0.5\\ 2(1-y) &; \text{otherwise}\end{cases}$$
+$$\mu_{\text{cloudy}}(x)=\begin{cases} \frac{x-2}{3} & \text{if } 2\le x\le5 \\ 1 & \text{if } 5 < x\le7 \\ 0 & \text{otherwise} \end{cases}$$
+
+$$\mu_{\text{dry}}(y)=\begin{cases} 1 & \text{if } 0 \le y \le 0.5 \\ 2(1-y) & \text{otherwise} \end{cases}$$
 where $x\in[0,10]$ and $y\in[0,1]$. Construct the fuzzy relation of "IF the x is cloudy, THEN the y is not dry" using the basic fuzzy complement and Mamdani Min implication $\mu_{Q_{MM}}(x,y)=\min(\mu_{FP_1}(x),\mu_{FP_2}(y))$ where appropriate.""",
         "answer": r"""**ANSWER SCHEME:**
-* **Step 1: Compute Fuzzy Complement for "not dry"**
-  $$\mu_{\text{not dry}}(y) = 1 - \mu_{\text{dry}}(y) = \begin{cases} 0 &; 0 \le y \le 0.5 \\ 2y - 1 &; 0.5 < y \le 1 \end{cases} \quad \text{`[M2]`}$$
+* **Step 1: Compute Fuzzy Complement for "not dry"** [cite: 66]
+  $$\mu_{\text{not dry}}(y) = 1 - \mu_{\text{dry}}(y) = \begin{cases} 0 & \text{if } 0 \le y \le 0.5 \\\\ 2y - 1 & \text{if } 0.5 < y \le 1 \end{cases} \quad \text{`[M2]`}$$ [cite: 68]
 
-* **Step 2: Construct Mamdani Relation $\mu_{\text{cloudy} \rightarrow \text{not dry}}(x,y)$**
-  $$\mu_{\text{cloudy} \rightarrow \text{not dry}}(x,y) = \left\{ \begin{array}{ll} 
-  \min\left[\frac{x-2}{3}, 2y-1\right] & \text{if } 2 \le x \le 5, \; 0.5 < y \le 1 \\\\ 
-  2y-1 & \text{if } 5 < x \le 7, \; 0.5 < y \le 1 \\\\ 
-  0 & \text{otherwise} 
-  \end{array} \right. \quad \text{`[M2, A2]`}$$"""
+* **Step 2: Construct Mamdani Relation $\mu_{\text{cloudy} \rightarrow \text{not dry}}(x,y)$** [cite: 66]
+  $$\mu_{\text{cloudy} \rightarrow \text{not dry}}(x,y) = \begin{cases} \min\left(\frac{x-2}{3}, 2y-1\right) & \text{if } 2 \le x \le 5, \; 0.5 < y \le 1 \\\\ 2y-1 & \text{if } 5 < x \le 7, \; 0.5 < y \le 1 \\\\ 0 & \text{otherwise} \end{cases} \quad \text{`[M2, A2]`}$$ [cite: 82, 85, 86]"""
     },
     {
         "question_no": "Question 3(a)",
