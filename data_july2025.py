@@ -171,40 +171,37 @@ Using the Dienes-Rescher implication $\mu_{Q_D}(x, y) = \max(1 - \mu_{\text{FP}_
     },
     {
         "question_no": "Question 3(c)",
-        "topic": "Reichenbach Rule-Based Modeling",
-        "question": r"""Let $A$, $B$, and $C$ be continuous fuzzy sets defined on $x \in [0,8]$, $y \in [0,10]$, and $z \in [0,10]$ respectively, where:
-$$\mu_A(x) = \begin{cases} \frac{x}{3} & 0 \le x \le 3 \\\\ 1 & 3 \le x \le 5 \\\\ \frac{8-x}{3} & 5 \le x \le 8 \end{cases} \quad \mu_B(y) = \begin{cases} \frac{y}{5} & 0 \le y \le 5 \\\\ \frac{10-y}{5} & 5 \le y \le 10 \end{cases}$$
-$$\text{and} \quad \mu_C(z) = \begin{cases} \frac{z-3}{5} & 3 \le z \le 8 \\\\ \frac{10-z}{2} & 8 \le z \le 10 \\\\ 0 & \text{otherwise} \end{cases}$$
-
-Obtain the comprehensive system membership function for the complex rule **"IF $\langle x \text{ is } A \text{ or } y \text{ is } B \rangle$ THEN $\langle z \text{ is } C \rangle$**", using the Yager Class $s_w(a, b) = \min(1, (a^w + b^w)^{1/w})$ where $w = 1$ for the s-norm, and the Mamdani Min implication $\mu_{Q_{\text{MM}}}(x, y) = \min(\mu_{\text{FP}_1}(x), \mu_{\text{FP}_2}(y))$ for the operational logical link.""",
+        "topic": "Yager-Mamdani Relational Profile Synthesis",
+        "question": r"""[Sila letak teks soalan 3(c) anda di sini]""",
         "answer": r"""**SUGGESTED ANSWER:**
 
-* **Step 1: Determine the compound antecedent ($A \cup B$) via Yager s-norm ($w=1$)**
-  When $w=1$, the expression yields the bounded sum operator: $\min(1, \mu_A(x) + \mu_B(y))$.
-  $$\mu_{A \cup B}(x, y) = \begin{cases} 
-  \frac{5x+3y}{15} & 0 \le x \le 3, \; 0 \le y \le 5 \\\\ 
-  \frac{5x-3y+30}{15} & 0 \le x \le 3, \; 5 \le y \le 10 \\\\ 
-  1 & 3 \le x \le 5, \; 0 \le y \le 10 \\\\ 
-  \frac{40-5x+3y}{15} & 5 \le x \le 8, \; 0 \le y \le 5 \\\\ 
-  \frac{70-5x-3y}{15} & 5 \le x \le 8, \; 5 \le y \le 10 
-  \end{cases}$$
+**Step 1: Determine the compound antecedent ($A \cup B$) via Yager s-norm ($w=1$)**
+When $w=1$, the expression yields the bounded sum operator: $\min(1, \mu_A(x) + \mu_B(y))$.
 
-* **Step 2: Embed using the Mamdani Min Implication Rule**
-  $\mu_{R}(x,y,z) = \min[\mu_{A \cup B}(x,y), \, \mu_C(z)]$
-  
-  $$\mu_{A \cup B \to C}(x, y, z) = \begin{cases} 
-  \min\left(\frac{5x+3y}{15}, \frac{z-3}{5}\right) & 0 \le x \le 3, \; 0 \le y \le 5, \; 3 \le z \le 8 \\\\ 
-  \min\left(\frac{5x+3y}{15}, \frac{10-z}{2}\right) & 0 \le x \le 3, \; 0 \le y \le 5, \; 8 \le z \le 10 \\\\ 
-  \min\left(\frac{5x-3y+30}{15}, \frac{z-3}{5}\right) & 0 \le x \le 3, \; 5 \le y \le 10, \; 3 \le z \le 8 \\\\ 
-  \min\left(\frac{5x-3y+30}{15}, \frac{10-z}{2}\right) & 0 \le x \le 3, \; 5 \le y \le 10, \; 8 \le z \le 10 \\\\ 
-  \frac{z-3}{5} & 3 \le x \le 5, \; 0 \le y \le 10, \; 3 \le z \le 8 \\\\ 
-  \frac{10-z}{2} & 3 \le x \le 5, \; 0 \le y \le 10, \; 8 \le z \le 10 \\\\ 
-  \min\left(\frac{40-5x+3y}{15}, \frac{z-3}{5}\right) & 5 \le x \le 8, \; 0 \le y \le 5, \; 3 \le z \le 8 \\\\ 
-  \min\left(\frac{40-5x+3y}{15}, \frac{10-z}{2}\right) & 5 \le x \le 8, \; 0 \le y \le 5, \; 8 \le z \le 10 \\\\ 
-  \min\left(\frac{70-5x-3y}{15}, \frac{z-3}{5}\right) & 5 \le x \le 8, \; 5 \le y \le 10, \; 3 \le z \le 8 \\\\ 
-  \min\left(\frac{70-5x-3y}{15}, \frac{10-z}{2}\right) & 5 \le x \le 8, \; 5 \le y \le 10, \; 8 \le z \le 10 \\\\
-  0 & \text{otherwise}
-  \end{cases}$$"""
+$$\mu_{A \cup B}(x,y) = \begin{cases} 
+\frac{5x+3y}{15} &; 0 \le x \le 3, \; 0 \le y \le 5 \\\\ 
+\frac{5x-3y+30}{15} &; 0 \le x \le 3, \; 5 \le y \le 10 \\\\ 
+1 &; 3 \le x \le 5, \; 0 \le y \le 10 \\\\ 
+\frac{40-5x+3y}{15} &; 5 \le x \le 8, \; 0 \le y \le 5 \\\\ 
+\frac{70-5x-3y}{15} &; 5 \le x \le 8, \; 5 \le y \le 10 
+\end{cases}$$
+
+**Step 2: Embed using the Mamdani Min Implication Rule:**
+$$\mu_R(x,y,z) = \min[\mu_{A \cup B}(x,y), \, \mu_C(z)]$$
+
+$$\mu_R(x,y,z) = \begin{cases} 
+\min\left(\frac{5x+3y}{15}, \frac{z-3}{5}\right) &; 0 \le x \le 3, \; 0 \le y \le 5, \; 3 \le z \le 8 \\\\ 
+\min\left(\frac{5x+3y}{15}, \frac{10-z}{2}\right) &; 0 \le x \le 3, \; 0 \le y \le 5, \; 8 \le z \le 10 \\\\ 
+\min\left(\frac{5x-3y+30}{15}, \frac{z-3}{5}\right) &; 0 \le x \le 3, \; 5 \le y \le 10, \; 3 \le z \le 8 \\\\ 
+\min\left(\frac{5x-3y+30}{15}, \frac{10-z}{2}\right) &; 0 \le x \le 3, \; 5 \le y \le 10, \; 8 \le z \le 10 \\\\ 
+\frac{z-3}{5} &; 3 \le x \le 5, \; 0 \le y \le 10, \; 3 \le z \le 8 \\\\ 
+\frac{10-z}{2} &; 3 \le x \le 5, \; 0 \le y \le 10, \; 8 \le z \le 10 \\\\ 
+\min\left(\frac{40-5x+3y}{15}, \frac{z-3}{5}\right) &; 5 \le x \le 8, \; 0 \le y \le 5, \; 3 \le z \le 8 \\\\ 
+\min\left(\frac{40-5x+3y}{15}, \frac{10-z}{2}\right) &; 5 \le x \le 8, \; 0 \le y \le 5, \; 8 \le z \le 10 \\\\ 
+\min\left(\frac{70-5x-3y}{15}, \frac{z-3}{5}\right) &; 5 \le x \le 8, \; 5 \le y \le 10, \; 3 \le z \le 8 \\\\ 
+\min\left(\frac{70-5x-3y}{15}, \frac{10-z}{2}\right) &; 5 \le x \le 8, \; 5 \le y \le 10, \; 8 \le z \le 10 \\\\ 
+0 &; \text{otherwise} 
+\end{cases}$$"""
     },
     {
         "question_no": "Question 4",
