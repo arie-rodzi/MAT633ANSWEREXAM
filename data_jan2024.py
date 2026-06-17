@@ -66,44 +66,33 @@ ii) Very Tasty and Not Cheap.""",
   $=\\left(\\frac{0.01}{x_{1}}+\\frac{0.81}{x_{2}}+\\frac{0.04}{x_{3}}+\\frac{0.16}{x_{4}}\\right) \\cdot \\left(\\frac{0.5}{x_{1}}+\\frac{0.7}{x_{2}}+\\frac{0.9}{x_{3}}+\\frac{0.3}{x_{4}}\\right)$
   $= \\frac{0.005}{x_{1}}+\\frac{0.567}{x_{2}}+\\frac{0.036}{x_{3}}+\\frac{0.048}{x_{4}}$ `[M2, A2]`"""
     },
-  {
+ {
         "question_no": "Question 2(c)",
         "topic": "Custom Implication Operator Formulation",
-        "question": r"""Let $P=\{p_{1},p_{2},p_{3}\}$ and $Q=\{q_{1},q_{2},q_{3}\}$ where these discrete sets are:
-$$P=\frac{0.1}{p_{1}}+\frac{0.8}{p_{2}}+\frac{0.3}{p_{3}}$$
-$$Q=\frac{1}{q_{1}}+\frac{0.5}{q_{2}}+\frac{0.2}{q_{3}}$$
+        "question": r"""Let $P=\{p_1, p_2, p_3\}$ and $Q=\{q_1, q_2, q_3\}$ where these discrete sets are defined as:
+$$P = \frac{0.1}{p_1} + \frac{0.8}{p_2} + \frac{0.3}{p_3}$$
+$$Q = \frac{1}{q_1} + \frac{0.5}{q_2} + \frac{0.2}{q_3}$$
 
 Derive the implication of "IF (p is P) THEN (q is Q)" using the following formula:
-$$\mu_{\rightarrow}(x,y)=1-\min\{\max(\mu_{A}(x),\mu_{B}(y)),\min(1-\mu_{A}(x),\mu_{B}(y))\}$$""",
+$$\mu_{\rightarrow}(x,y) = 1 - \min( \max(\mu_A(x), \mu_B(y)), \min(1 - \mu_A(x), \mu_B(y)) )$$""",
         "answer": r"""**ANSWER SCHEME:**
-Evaluating mapping matrix entry-by-entry:
 
-* **Row $p_1$ ($\mu_P=0.1$):**
-  * $q_1 (1.0): 1-\min\{\max(0.1,1),\min(1-0.1,1)\} = 1-\min(1,0.9) = 1-0.9 = 0.1$
-  * $q_2 (0.5): 1-\min\{\max(0.1,0.5),\min(1-0.1,0.5)\} = 1-\min(0.5,0.5) = 1-0.5 = 0.5$
-  * $q_3 (0.2): 1-\min\{\max(0.1,0.2),\min(1-0.1,0.2)\} = 1-\min(0.2,0.2) = 1-0.2 = 0.8$
+Evaluating the mapping matrix entry-by-entry using the given formulation:
 
-* **Row $p_2$ ($\mu_P=0.8$):**
-  * $q_1 (1.0): 1-\min\{\max(0.8,1),\min(1-0.8,1)\} = 1-\min(1,0.2) = 1-0.2 = 0.8$
-  * $q_2 (0.5): 1-\min\{\max(0.8,0.5),\min(1-0.8,0.5)\} = 1-\min(0.8,0.2) = 1-0.2 = 0.8$
-  * $q_3 (0.2): 1-\min\{\max(0.8,0.2),\min(1-0.8,0.2)\} = 1-\min(0.8,0.2) = 1-0.2 = 0.8$
+| Row Element | $q_1$ ($\mu_Q = 1.0$) | $q_2$ ($\mu_Q = 0.5$) | $q_3$ ($\mu_Q = 0.2$) |
+| :--- | :--- | :--- | :--- |
+| **$p_1$ ($\mu_P = 0.1$)** | $1 - \min(1, 0.9) = 0.1$ | $1 - \min(0.5, 0.5) = 0.5$ | $1 - \min(0.2, 0.2) = 0.8$ |
+| **$p_2$ ($\mu_P = 0.8$)** | $1 - \min(1, 0.2) = 0.8$ | $1 - \min(0.8, 0.2) = 0.8$ | $1 - \min(0.8, 0.2) = 0.8$ |
+| **$p_3$ ($\mu_P = 0.3$)** | $1 - \min(1, 0.7) = 0.3$ | $1 - \min(0.5, 0.5) = 0.5$ | $1 - \min(0.3, 0.2) = 0.8$ |
 
-* **Row $p_3$ ($\mu_P=0.3$):**
-  * $q_1 (1.0): 1-\min\{\max(0.3,1),\min(1-0.3,1)\} = 1-\min(1,0.7) = 1-0.7 = 0.3$
-  * $q_2 (0.5): 1-\min\{\max(0.3,0.5),\min(1-0.3,0.5)\} = 1-\min(0.5,0.5) = 1-0.5 = 0.5$
-  * $q_3 (0.2): 1-\min\{\max(0.3,0.2),\min(1-0.3,0.2)\} = 1-\min(0.3,0.2) = 1-0.2 = 0.8$
+---
 
-**Fuzzy Relation Matrix Representation:**
-$$\mu_{P\rightarrow Q}(p,q) = \begin{array}{c|ccc}
- & q_1 & q_2 & q_3 \\
-\hline
-p_1 & 0.1 & 0.5 & 0.8 \\
-p_2 & 0.8 & 0.8 & 0.8 \\
-p_3 & 0.3 & 0.5 & 0.8
-\end{array}$$
+### Deployed Fuzzy Relation Matrix Result:
 
-**Alternative Algebraic Expression:**
-$$\mu_{P\rightarrow Q}(p,q)=\frac{0.1}{p_{1}q_{1}}+\frac{0.8}{p_{2}q_{1}}+\frac{0.3}{p_{3}q_{1}}+\frac{0.5}{p_{1}q_{2}}+\frac{0.8}{p_{2}q_{2}}+\frac{0.5}{p_{3}q_{2}}+\frac{0.8}{p_{1}q_{3}}+\frac{0.8}{p_{2}q_{3}}+\frac{0.8}{p_{3}q_{3}}$$
+$$\mu_{P\rightarrow Q}(p,q) = \begin{bmatrix} 0.1 & 0.5 & 0.8 \\ 0.8 & 0.8 & 0.8 \\ 0.3 & 0.5 & 0.8 \end{bmatrix}$$
+
+*Alternative Algebraic Expression:*
+$$\mu_{P\rightarrow Q}(p,q) = \frac{0.1}{p_1q_1} + \frac{0.8}{p_2q_1} + \frac{0.3}{p_3q_1} + \frac{0.5}{p_1q_2} + \frac{0.8}{p_2q_2} + \frac{0.5}{p_3q_2} + \frac{0.8}{p_1q_3} + \frac{0.8}{p_2q_3} + \frac{0.8}{p_3q_3}$$
 
 `[M6, A4]`"""
     },
