@@ -128,21 +128,25 @@ By breaking down the evaluation intersections using $\min(\mu_C(c_i), \mu_D(d_j)
   Since $\alpha \ge 0.1$, $\alpha \ge 0.8$ and $\alpha \ge 0.5$, we get $\mathbf{\alpha \ge 0.8}$.
   For $\beta$, the exact boundary match forces $\mathbf{\beta = 0.6}$. `[A2]`"""
     },
-    {
+  {
         "question_no": "Question 3(c)",
         "topic": "Continuous Composition Profile",
         "marks": "10",
         "question": r"""Let M, N and P be fuzzy sets defined on $x\in[0,8]$, $y\in[0,10]$ and $z\in[0,10]$ respectively, where:
-$$\mu_{M}(x)=\begin{cases}x &; 0\le x < 1\\ 1 &; 1\le x\le3\\ 4-x &; 3\le x\le4\\ 0 &; \text{otherwise}\end{cases} \quad \mu_{N}(y)=\begin{cases}\frac{y-1}{3} &; 1 \le y \le 4 \\ \frac{6-y}{2} &; 4 < y \le 6 \\ 0 &; \text{otherwise}\end{cases}$$
-$$\mu_{P}(z)=\begin{cases}\frac{z-3}{2} &; 3\le z\le5\\ \frac{7-z}{2} &; 5 < z\le7\\ 0 &; \text{otherwise}\end{cases}$$
+$$\mu_{M}(x)=\begin{cases} x & \text{if } 0\le x < 1 \\ 1 & \text{if } 1\le x\le3 \\ 4-x & \text{if } 3\le x\le4 \\ 0 & \text{otherwise} \end{cases}$$
+
+$$\mu_{N}(y)=\begin{cases} \frac{y-1}{3} & \text{if } 1 \le y \le 4 \\ \frac{6-y}{2} & \text{if } 4 < y \le 6 \\ 0 & \text{otherwise} \end{cases}$$
+
+$$\mu_{P}(z)=\begin{cases} \frac{z-3}{2} & \text{if } 3\le z\le5 \\ \frac{7-z}{2} & \text{if } 5 < z\le7 \\ 0 & \text{otherwise} \end{cases}$$
+
 i) Obtain the membership function for the IF-THEN rule $IF \langle x \text{ is } M \text{ and } y \text{ is } N \rangle THEN \langle z \text{ is } P \rangle$ using the Algebraic Product ($t_{ap}(a,b)=ab$) for the t-norm and Mamdani Product implication ($\mu_{Q_{AP}}(x,y)=\mu_{FP_1}(x)\cdot\mu_{FP_2}(y)$).
 ii) Hence, determine the implication value when $x=2, y=2$ and $z=6$.""",
         "answer": r"""**ANSWER SCHEME:**
 
-**i) Membership Function Matrix Formulation:**
-Using Algebraic Product $T_{ap}(x,y) = \mu_M(x) \cdot \mu_N(y)$ followed by Mamdani Product Implication with $z$, the system expands into the piecewise profile below:
+**i) Membership Function Matrix Formulation:** [cite: 139]
+Using Algebraic Product $T_{ap}(x,y) = \mu_M(x) \cdot \mu_N(y)$ followed by Mamdani Product Implication with $z$, the system expands into the piecewise profile below: [cite: 139]
 
-$$\mu_{(M \cap N) \rightarrow P}(x,y,z) = \left\{ \begin{array}{ll}
+$$\mu_{(M \cap N) \rightarrow P}(x,y,z) = \begin{cases} 
 \frac{(xy-x)(z-3)}{6} & \text{if } 0 \le x \le 1, \; 1 \le y \le 4, \; 3 \le z \le 5 \\\\ 
 \frac{(xy-x)(7-z)}{6} & \text{if } 0 \le x \le 1, \; 1 \le y \le 4, \; 5 \le z \le 7 \\\\ 
 \frac{(6x-xy)(z-3)}{4} & \text{if } 0 \le x \le 1, \; 4 \le y \le 6, \; 3 \le z \le 5 \\\\ 
@@ -155,12 +159,12 @@ $$\mu_{(M \cap N) \rightarrow P}(x,y,z) = \left\{ \begin{array}{ll}
 \frac{(4-x)(y-1)(7-z)}{6} & \text{if } 3 \le x \le 4, \; 1 \le y \le 4, \; 5 \le z \le 7 \\\\ 
 \frac{(4-x)(6-y)(z-3)}{4} & \text{if } 3 \le x \le 4, \; 4 \le y \le 6, \; 3 \le z \le 5 \\\\ 
 \frac{(4-x)(6-y)(7-z)}{4} & \text{if } 3 \le x \le 4, \; 4 \le y \le 6, \; 5 \le z \le 7 \\\\ 
-0 & \text{otherwise}
-\end{array} \right. \quad \text{`[M2, M3, A1]`}$$
+0 & \text{otherwise} 
+\end{cases} \quad \text{`[M2, M3, A1]`}$$ [cite: 151, 152, 179]
 
-**ii) Value Evaluation for $x=2, y=2, z=6$:**
-The coordinates fall directly inside the range: $1 \le x \le 3, \; 1 \le y \le 4, \; 5 \le z \le 7$.
-$$\mu(2,2,6) = \frac{(y-1)(7-z)}{6} = \frac{(2-1)(7-6)}{6} = \frac{1}{6} \quad \text{`[M1, A1]`}$$"""
+**ii) Value Evaluation for $x=2, y=2, z=6$:** [cite: 180]
+The coordinates fall directly inside the range: $1 \le x \le 3, \; 1 \le y \le 4, \; 5 \le z \le 7$. [cite: 181]
+$$\mu(2,2,6) = \frac{(y-1)(7-z)}{6} = \frac{(2-1)(7-6)}{6} = \frac{1}{6} \quad \text{`[M1, A1]`}$$ [cite: 181, 184]"""
     },
     {
         "question_no": "Question 4",
