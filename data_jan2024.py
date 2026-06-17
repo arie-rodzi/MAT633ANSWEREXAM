@@ -162,35 +162,54 @@ Final mapping $\\mu_{A \\cap B \\rightarrow C}(x,y,z) = \\mu_{A \\cap B}(x,y) \\
 Identify coordinates map into active region $1 \\le x \\le 5$, $6 \\le y \\le 10$, and $0 \\le z \\le 3$:
 $$\\mu_{A\\cap B\\rightarrow C}(3,7,2)=\\frac{10z-yz}{12}=\\frac{10(2)-(7)(2)}{12}=\\frac{20-14}{12} = 0.5$$ `[M1, A1]`"""
     },
-    {
+   {
         "question_no": "Question 4(a)",
         "topic": "Dubois-Prade Dienes-Rescher Systems",
-        "marks": "12",
-        "question": """Let $A=\\{a_{1},a_{2}\\}$, $B=\\{b_{1},b_{2}\\}$ and $C=\\{c_{1},c_{2}\\}$ where:
-$$A=\\frac{0.4}{a_{1}}+\\frac{0.7}{a_{2}}, \\quad B=\\frac{0.9}{b_{1}}+\\frac{0.2}{b_{2}} \\quad \\text{and} \\quad C=\\frac{0.7}{c_{1}}+\\frac{0.4}{c_{2}}$$
+        "question": r"""Let $A=\{a_{1},a_{2}\}$, $B=\{b_{1},b_{2}\}$ and $C=\{c_{1},c_{2}\}$ where:
+$$A=\frac{0.4}{a_{1}}+\frac{0.7}{a_{2}}, \quad B=\frac{0.9}{b_{1}}+\frac{0.2}{b_{2}} \quad \text{and} \quad C=\frac{0.7}{c_{1}}+\frac{0.4}{c_{2}}$$
 
-Compute IF (a is A and b is B) THEN (c is not C) using the Dubois-Prade class $\\left(t_{a}(a,b)=\\frac{ab}{max(a,b,\\alpha)}\\right)$ at $\alpha=1$ for t-norm, basic fuzzy complement for complement, and Dienes-Rescher implication $(\\mu_{O_{D}}(x,y)=max[1-\\mu_{FP_{1}}(x),\\mu_{FP_{2}}(y)])$ for the implication.""",
-        "answer": """**ANSWER SCHEME:**
-* Intermediary t-norm intersections via Dubois-Prade class ($\\alpha=1$):
-  * $a_1 b_1: \\frac{0.4 \\times 0.9}{max(0.4, 0.9, 1)} = \\frac{0.36}{1} = 0.36$
-  * $a_2 b_1: \\frac{0.7 \\times 0.9}{max(0.7, 0.9, 1)} = \\frac{0.63}{1} = 0.63$
-  * $a_1 b_2: \\frac{0.4 \\times 0.2}{max(0.4, 0.2, 1)} = \\frac{0.08}{1} = 0.08$
-  * $a_2 b_2: \\frac{0.7 \\times 0.2}{max(0.7, 0.2, 1)} = \\frac{0.14}{1} = 0.14$
-  $$\text{Resulting set } A \cap B = \frac{0.36}{a_1b_1} + \frac{0.63}{a_2b_1} + \frac{0.08}{a_1b_2} + \frac{0.14}{a_2b_2}$$
+Compute IF (a is A and b is B) THEN (c is not C) using the Dubois-Prade class $\left(t_{a}(a,b)=\frac{ab}{\max(a,b,\alpha)}\right)$ at $\alpha=1$ for t-norm, basic fuzzy complement for complement, and Dienes-Rescher implication $(\mu_{O_{D}}(x,y)=\max[1-\mu_{FP_{1}}(x),\mu_{FP_{2}}(y)])$ for the implication.""",
+        "answer": r"""**ANSWER SCHEME:**
 
-* Complement state: $\\text{not } C = \\frac{1-0.7}{c_1} + \\frac{1-0.4}{c_2} = \\frac{0.3}{c_1} + \\frac{0.6}{c_2}$
+* **Step 1: Intermediary t-norm intersections via Dubois-Prade class ($\alpha=1$):**
+  * $a_1 b_1: \frac{0.4 \times 0.9}{\max(0.4, 0.9, 1)} = \frac{0.36}{1} = 0.36$
+  * $a_2 b_1: \frac{0.7 \times 0.9}{\max(0.7, 0.9, 1)} = \frac{0.63}{1} = 0.63$
+  * $a_1 b_2: \frac{0.4 \times 0.2}{\max(0.4, 0.2, 1)} = \frac{0.08}{1} = 0.08$
+  * $a_2 b_2: \frac{0.7 \times 0.2}{\max(0.7, 0.2, 1)} = \frac{0.14}{1} = 0.14$
 
-* Implication matrix composition via $max(1-\\mu_{A\\cap B}, \\mu_{\\overline{C}})$:
-  * $a_1 b_1 \\rightarrow c_1: max(1-0.36, 0.3) = max(0.64, 0.3) = 0.64$
-  * $a_1 b_1 \\rightarrow c_2: max(1-0.36, 0.6) = max(0.64, 0.6) = 0.64$
-  * $a_2 b_1 \\rightarrow c_1: max(1-0.63, 0.3) = max(0.37, 0.3) = 0.37$
-  * $a_2 b_1 \\rightarrow c_2: max(1-0.63, 0.6) = max(0.37, 0.6) = 0.6$
-  * $a_1 b_2 \\rightarrow c_1: max(1-0.08, 0.3) = max(0.92, 0.3) = 0.92$
-  * $a_1 b_2 \\rightarrow c_2: max(1-0.08, 0.6) = max(0.92, 0.6) = 0.92$
-  * $a_2 b_2 \\rightarrow c_1: max(1-0.14, 0.3) = max(0.86, 0.3) = 0.86$
-  * $a_2 b_2 \\rightarrow c_2: max(1-0.14, 0.6) = max(0.86, 0.6) = 0.86$
+$$\text{Resulting Antecedent Intersection Matrix:}$$
+$$A \cap B = \begin{array}{c|cc}
+ & b_1 & b_2 \\
+\hline
+a_1 & 0.36 & 0.08 \\
+a_2 & 0.63 & 0.14
+\end{array}$$
 
-$$(A\\cap B)\\rightarrow \\overline{C}=\\frac{0.64}{a_1b_1c_1} + \\frac{0.64}{a_1b_1c_2} + \\frac{0.37}{a_2b_1c_1} + \\frac{0.6}{a_2b_1c_2} + \\frac{0.92}{a_1b_2c_1} + \\frac{0.92}{a_1b_2c_2} + \\frac{0.86}{a_2b_2c_1} + \\frac{0.86}{a_2b_2c_2}$$ `[M4, A2]`"""
+* **Step 2: Complement state evaluation:**
+  $$\text{not } C = \frac{1-0.7}{c_1} + \frac{1-0.4}{c_2} = \frac{0.3}{c_1} + \frac{0.6}{c_2}$$
+
+* **Step 3: Implication matrix composition via $\max(1-\mu_{A\cap B}, \mu_{\overline{C}})$:**
+  * $a_1 b_1 \rightarrow c_1: \max(1-0.36, 0.3) = \max(0.64, 0.3) = 0.64$
+  * $a_1 b_1 \rightarrow c_2: \max(1-0.36, 0.6) = \max(0.64, 0.6) = 0.64$
+  * $a_2 b_1 \rightarrow c_1: \max(1-0.63, 0.3) = \max(0.37, 0.3) = 0.37$
+  * $a_2 b_1 \rightarrow c_2: \max(1-0.63, 0.6) = \max(0.37, 0.6) = 0.6$
+  * $a_1 b_2 \rightarrow c_1: \max(1-0.08, 0.3) = \max(0.92, 0.3) = 0.92$
+  * $a_1 b_2 \rightarrow c_2: \max(1-0.08, 0.6) = \max(0.92, 0.6) = 0.92$
+  * $a_2 b_2 \rightarrow c_1: \max(1-0.14, 0.3) = \max(0.86, 0.3) = 0.86$
+  * $a_2 b_2 \rightarrow c_2: \max(1-0.14, 0.6) = \max(0.86, 0.6) = 0.86$
+
+### Deployed Comprehensive Solution System Matrix:
+
+$$\begin{array}{cc|cc}
+\text{Antecedent } (x) & \text{Weight } \mu_{A \cap B}(x) & \mu_{\rightarrow}(x, c_1) & \mu_{\rightarrow}(x, c_2) \\
+\hline
+a_1b_1 & 0.36 & 0.64 & 0.64 \\
+a_2b_1 & 0.63 & 0.37 & 0.60 \\
+a_1b_2 & 0.08 & 0.92 & 0.92 \\
+a_2b_2 & 0.14 & 0.86 & 0.86 \\
+\end{array}$$
+
+`[M4, A2]`"""
     },
     {
         "question_no": "Question 4(b)",
