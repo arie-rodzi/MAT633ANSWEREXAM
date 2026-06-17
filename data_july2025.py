@@ -15,7 +15,7 @@ questions = [
 * The atomic fuzzy proposition must be considered as a fuzzy relation. **FALSE**
 * Fuzzy logic provides a foundation for approximate reasoning with imprecise propositions using fuzzy set theory as the principal tool. **TRUE**"""
     },
-   {
+  {
         "question_no": "Question 1(b)",
         "topic": "Structural Propositional Taxonomy",
         "marks": "4",
