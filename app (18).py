@@ -33,7 +33,7 @@ for idx, q_block in enumerate(current_questions):
         col1, col2 = st.columns([1, 4])
         with col1:
             st.subheader(f"🏷️ {q_block['question_no']}")
-            st.info(f"**Weight:** {q_block['marks']} Marks")
+            # st.info(f"**Weight:** {q_block['marks']} Marks")
             st.write(f"**Topic Focus:** \n`{q_block['topic']}`")
         with col2:
             st.markdown("### Question Formulation")
