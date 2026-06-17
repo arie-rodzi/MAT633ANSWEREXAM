@@ -15,27 +15,27 @@ questions = [
 * The atomic fuzzy proposition must be considered as a fuzzy relation. **FALSE**
 * Fuzzy logic provides a foundation for approximate reasoning with imprecise propositions using fuzzy set theory as the principal tool. **TRUE**"""
     },
-    {
+   {
         "question_no": "Question 1(b)",
         "topic": "Structural Propositional Taxonomy",
+        "marks": "4",
         "question": r"""Briefly explain the General Hypothetical Syllogism in fuzzy logic. Then give ONE (1) example of the proposition in fuzzy logic.""",
         "answer": r"""**SUGGESTED ANSWER:**
 
 **Explanation:**
-Given a fuzzy relation $A \rightarrow B$ in universe $U \times V$ (representing the premise: "IF $x$ is $A$ THEN $y$ is $B$") and a fuzzy relation $B' \rightarrow C$ in universe $V \times W$ (representing the premise: "IF $y$ is $B'$ THEN $z$ is $C$"), the General Hypothetical Syllogism derives a fuzzy relation $A \rightarrow C'$ in universe $U \times W$ representing the valid conclusion: "IF $x$ is $A$ THEN $z$ is $C'$".
+Given a fuzzy relation $A \rightarrow B$ in universe $U \times V$ (representing the premise: "IF $x$ is $A$ THEN $y$ is $B$") and a fuzzy relation $B \rightarrow C$ in universe $V \times W$ (representing the premise: "IF $y$ is $B$ THEN $z$ is $C$"), the General Hypothetical Syllogism derives a fuzzy relation $A \rightarrow C$ in universe $U \times W$ representing the valid conclusion: "IF $x$ is $A$ THEN $z$ is $C$".
 
 **Symbolic Framework:**
 $$\begin{aligned}
-\text{PREMISE 1:} & \quad \text{IF } X \text{ is } A \text{ THEN } Y \text{ is } B \\\\
-\text{PREMISE 2:} & \quad \text{IF } Y \text{ is } B \text{ THEN } Z \text{ is } C \\\\
-\hline
-\text{CONCLUSION:} & \quad \text{IF } X \text{ is } A \text{ THEN } Z \text{ is } C
+\text{PREMISE 1:} & \quad \text{IF } X \text{ is } A \text{ \text{THEN} } Y \text{ is } B \\\\
+\text{PREMISE 2:} & \quad \text{IF } Y \text{ is } B \text{ \text{THEN} } Z \text{ is } C \\\\ \hline
+\text{CONCLUSION:} & \quad \text{IF } X \text{ is } A \text{ \text{THEN} } Z \text{ is } C
 \end{aligned}$$
 
 **Demonstrative Example:**
-* **Premise 1:** IF today rains, THEN the football game will be cancelled.
-* **Premise 2:** IF the football game is cancelled, THEN we will sleep.
-* **Conclusion:** IF today rains, THEN we will sleep."""
+* **Premise 1:** IF today is **Cloudy**, THEN the room temperature is **Cool**.
+* **Premise 2:** IF the room temperature is **Cool**, THEN the air conditioner usage is **Low**.
+* **Conclusion:** IF today is **Cloudy**, THEN the air conditioner usage is **Low**."""
     },
     {
         "question_no": "Question 2(a)",
