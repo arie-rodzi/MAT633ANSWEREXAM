@@ -26,16 +26,16 @@ questions = [
 Given a fuzzy relation $A \rightarrow B$ in universe $U \times V$ (representing the premise: "IF $x$ is $A$ THEN $y$ is $B$") and a fuzzy relation $B \rightarrow C$ in universe $V \times W$ (representing the premise: "IF $y$ is $B$ THEN $z$ is $C$"), the General Hypothetical Syllogism derives a fuzzy relation $A \rightarrow C$ in universe $U \times W$ representing the valid conclusion: "IF $x$ is $A$ THEN $z$ is $C$".
 
 **Symbolic Framework:**
-$$\begin{aligned}
-\text{PREMISE 1:} & \quad \text{IF } X \text{ is } A \text{ \text{THEN} } Y \text{ is } B \\\\
-\text{PREMISE 2:} & \quad \text{IF } Y \text{ is } B \text{ \text{THEN} } Z \text{ is } C \\\\ \hline
-\text{CONCLUSION:} & \quad \text{IF } X \text{ is } A \text{ \text{THEN} } Z \text{ is } C
-\end{aligned}$$
+$$\begin{array}{ll}
+\text{PREMISE 1:} & \text{IF } X \text{ is } A \text{ THEN } Y \text{ is } B \\\\
+\text{PREMISE 2:} & \text{IF } Y \text{ is } B \text{ THEN } Z \text{ is } C \\\\ \hline
+\text{CONCLUSION:} & \text{IF } X \text{ is } A \text{ THEN } Z \text{ is } C
+\end{array}$$
 
 **Demonstrative Example:**
-* **Premise 1:** IF today is **Cloudy**, THEN the room temperature is **Cool**.
-* **Premise 2:** IF the room temperature is **Cool**, THEN the air conditioner usage is **Low**.
-* **Conclusion:** IF today is **Cloudy**, THEN the air conditioner usage is **Low**."""
+* **Premise 1:** IF today is Cloudy, THEN the room temperature is Cool.
+* **Premise 2:** IF the room temperature is Cool, THEN the air conditioner usage is Low.
+* **Conclusion:** IF today is Cloudy, THEN the air conditioner usage is Low."""
     },
     {
         "question_no": "Question 2(a)",
