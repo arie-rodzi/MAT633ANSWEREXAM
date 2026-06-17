@@ -57,4 +57,5 @@ for idx, q_block in enumerate(current_questions):
             with st.expander("🔓 Display Official Marking Scheme Key Matrix"):
                 st.markdown(q_block['answer'])
                 
-        st.markdown("<br><hr style='border: 1px dashed #dedede;'><br>", allow_html=True)
+        # Correct parameter implementation for HTML injection in Streamlit
+        st.markdown("<br><hr style='border: 1px dashed #dedede;'><br>", unsafe_allow_html=True)
