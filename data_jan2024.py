@@ -176,7 +176,7 @@ Compute IF (a is A and b is B) THEN (c is not C) using the Dubois-Prade class $\
   * $a_2 b_1: \\frac{0.7 \\times 0.9}{max(0.7, 0.9, 1)} = \\frac{0.63}{1} = 0.63$
   * $a_1 b_2: \\frac{0.4 \\times 0.2}{max(0.4, 0.2, 1)} = \\frac{0.08}{1} = 0.08$
   * $a_2 b_2: \\frac{0.7 \\times 0.2}{max(0.7, 0.2, 1)} = \\frac{0.14}{1} = 0.14$
-  $$\\text{Resulting set } A \\cap B = \\frac{0.36}{a_{1}b_{1}}+\\frac{0.63}{a_{2}b_{1}}+\\frac{0.08}{a_{1}b_{2}}+\frac{0.14}{a_{2}b_{2}}$$
+  $$\text{Resulting set } A \cap B = \frac{0.36}{a_1b_1} + \frac{0.63}{a_2b_1} + \frac{0.08}{a_1b_2} + \frac{0.14}{a_2b_2}$$
 
 * Complement state: $\\text{not } C = \\frac{1-0.7}{c_1} + \\frac{1-0.4}{c_2} = \\frac{0.3}{c_1} + \\frac{0.6}{c_2}$
 
