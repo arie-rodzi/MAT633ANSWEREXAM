@@ -143,9 +143,10 @@ We evaluate the composition matching with the observation vector $\tilde{D} = [0
 **Derived Conclusion Set:**
 $$\tilde{C} = \frac{0.2}{c_1} + \frac{0.33}{c_2}$$"""
     },
-    {
+  {
         "question_no": "Question 3(b)",
         "topic": "Mamdani Relational Profile Synthesis",
+        "marks": "10",
         "question": r"""Let fuzzy sets 'strong' and 'stable' be defined on continuous universes $x \in [0,100]$ and $y \in [0,10]$ respectively, where:
 $$\mu_{\text{strong}}(x) = \begin{cases} \frac{x}{70} & 0 \le x \le 70 \\\\ 1 & 70 \le x \le 100 \end{cases} \quad \text{and} \quad \mu_{\text{stable}}(y) = \begin{cases} \frac{y}{5} & 0 \le y \le 5 \\\\ 1 & 5 \le y \le 10 \end{cases}$$
 
@@ -153,18 +154,13 @@ Using the Dienes-Rescher implication $\mu_{Q_D}(x, y) = \max(1 - \mu_{\text{FP}_
         "answer": r"""**SUGGESTED ANSWER:**
 
 * **Step 1: Compute the modified antecedent "very strong"**
-  $$\mu_{\text{very strong}}(x) = (\mu_{\text{strong}}(x))^2 = \begin{cases} \frac{x^2}{4900} & 0 \le x \le 70 \\\\ 1 & 70 \le x \le 100 \end{cases}$$
+  $$\mu_{\text{very strong}}(x) = (\mu_{\text{strong}}(x))^2 = \begin{cases} \frac{x^2}{4900} & \text{if } 0 \le x \le 70 \\\\ 1 & \text{if } 70 \le x \le 100 \end{cases}$$
 
 * **Step 2: Construct the Dienes-Rescher relation profile via piecewise synthesis**
-  $$\mu_{\text{very strong} \to \text{stable}}(x, y) = \max(1 - \mu_{\text{very strong}}(x), \, \mu_{\text{stable}}(y))$$
+  $$\mu_{\text{very strong} \to \text{stable}}(x, y) = \max(1 - \mu_{\text{very strong}}(x), \mu_{\text{stable}}(y))$$
   
   Evaluating across cross-product continuous boundary segments yields:
-  $$\mu_{\text{very strong} \rightarrow \text{stable}}(x, y) = \begin{cases} 
-  \max\left(1 - \frac{x^2}{4900}, \frac{y}{5}\right) & \text{if } 0 \le x \le 70, \, 0 \le y \le 5 \\\\ 
-  1 & \text{if } 0 \le x \le 100, \, 5 \le y \le 10 \\\\ 
-  \frac{y}{5} & \text{if } 70 \le x \le 100, \, 0 \le y \le 5 \\\\ 
-  0 & \text{otherwise} 
-  \end{cases}$$
+  $$\mu_{\text{very strong} \rightarrow \text{stable}}(x, y) = \begin{cases} \max\left(1 - \frac{x^2}{4900}, \frac{y}{5}\right) & \text{for } 0 \le x \le 70 \text{ and } 0 \le y \le 5 \\\\ 1 & \text{for } 0 \le x \le 100 \text{ and } 5 \le y \le 10 \\\\ \frac{y}{5} & \text{for } 70 \le x \le 100 \text{ and } 0 \le y \le 5 \\\\ 0 & \text{otherwise} \end{cases}$$"""
     },
     {
         "question_no": "Question 3(c)",
