@@ -100,32 +100,30 @@ $$\\text{Somewhat not } A \\text{ or not somewhat } B = \\frac{0.7746}{x_1} + \\
         "question_no": "Question 2(c)",
         "topic": "Yager-Lukasiewicz Matrix Projections",
         "question": """Let $X = \\{x_1, x_2, x_3\\}$ and $Y = \\{y_1, y_2, y_3\\}$ be discrete fuzzy sets where:
-$$X = \\frac{0.1}{x_1} + \\frac{0.3}{x_2} + \\frac{0.7}{x_3} \\quad \\text{and} \\quad Y = \\frac{0.5}{y_1} + \\frac{0.6}{y_2} + \\frac{1}{y_3}$$
+$$X = \\frac{0.3}{x_1} + \\frac{0.7}{x_2} \\quad \\text{and} \\quad Y = \\frac{0.9}{y_1} + \\frac{1}{y_2} + \\frac{0.2}{y_3}$$
 
 Using the Sugeno Class $C_{\\lambda} = \\frac{1-a}{1+\\lambda a}$ with $\\lambda = 2$ for the fuzzy complement, and the Gödel Implication:
 $$\\mu_{Q_G}(x, y) = \\begin{cases} 1 & \\text{if } \\mu_{FP_1}(x) \\le \\mu_{FP_2}(y) \\\\ \\mu_{FP_2}(y) & \\text{otherwise} \\end{cases}$$
 
-obtain the membership function matrix for the fuzzy IF-THEN rule: $\\text{IF } \\langle x \\text{ is not } X \\rangle \\text{ THEN } \\langle y \\text{ is } Y \\rangle$.""",
+obtain the membership function matrix for the fuzzy IF-THEN rule: $\\text{IF } \\langle x \\text is not } X \\rangle \\text{ THEN } \\langle y \\text{ is } Y \\rangle$.""",
         "answer": """**SUGGESTED ANSWER:**
 
 * **Step 1: Compute the Sugeno Complement of $X$ ($\\lambda = 2$)**
-  * $\\mu_{\\tilde{X}}(x_1) = \\frac{1 - 0.1}{1 + 2(0.1)} = \\frac{0.9}{1.2} = 0.75$
-  * $\\mu_{\\tilde{X}}(x_2) = \\frac{1 - 0.3}{1 + 2(0.3)} = \\frac{0.7}{1.6} = 0.4375$
-  * $\\mu_{\\tilde{X}}(x_3) = \\frac{1 - 0.7}{1 + 2(0.7)} = \\frac{0.3}{2.4} = 0.125$
+  * $\\mu_{\\tilde{X}}(x_1) = \\frac{1 - 0.3}{1 + 2(0.3)} = \\frac{0.7}{1.6} = 0.4375$
+  * $\\mu_{\\tilde{X}}(x_2) = \\frac{1 - 0.7}{1 + 2(0.7)} = \\frac{0.3}{2.4} = 0.125$
   
-  $$\\tilde{X} = \\frac{0.75}{x_1} + \\frac{0.4375}{x_2} + \\frac{0.125}{x_3}$$
+  $$\\tilde{X} = \\frac{0.4375}{x_1} + \\frac{0.125}{x_2}$$
 
 * **Step 2: Generate Relation Matrix via Gödel Implication**
-  Comparing antecedent vector $[0.75, 0.4375, 0.125]$ against consequent vector $[0.5, 0.6, 1.0]$:
+  Comparing antecedent vector $[0.4375, 0.125]$ against consequent vector $[0.9, 1.0, 0.2]$:
 
-| Antecedent / Consequent | $y_1 \\, (0.5)$ | $y_2 \\, (0.6)$ | $y_3 \\, (1.0)$ |
+| Antecedent / Consequent | $y_1 \\, (0.9)$ | $y_2 \\, (1.0)$ | $y_3 \\, (0.2)$ |
 | :--- | :---: | :---: | :---: |
-| **$x_1 \\, (0.75)$** | $0.5$ | $0.6$ | $1.0$ |
-| **$x_2 \\, (0.4375)$**| $1.0$ | $1.0$ | $1.0$ |
-| **$x_3 \\, (0.125)$** | $1.0$ | $1.0$ | $1.0$ |
+| **$x_1 \\, (0.4375)$** | $1.0$ | $1.0$ | $0.2$ |
+| **$x_2 \\, (0.125)$** | $1.0$ | $1.0$ | $1.0$ |
 
 **Final Analytical Form:**
-$$\\mu_{\\tilde{X} \\to Y}(x,y) = \\frac{0.5}{(x_1,y_1)} + \\frac{0.6}{(x_1,y_2)} + \\frac{1}{(x_1,y_3)} + \\frac{1}{(x_2,y_1)} + \\frac{1}{(x_2,y_2)} + \\frac{1}{(x_2,y_3)} + \\frac{1}{(x_3,y_1)} + \\frac{1}{(x_3,y_2)} + \\frac{1}{(x_3,y_3)}$$"""
+$$\\mu_{\\tilde{X} \\to Y}(x,y) = \\frac{1}{(x_1,y_1)} + \\frac{1}{(x_1,y_2)} + \\frac{0.2}{(x_1,y_3)} + \\frac{1}{(x_2,y_1)} + \\frac{1}{(x_2,y_2)} + \\frac{1}{(x_2,y_3)}$$"""
     },
     {
         "question_no": "Question 3(a)",
@@ -201,7 +199,7 @@ Obtain the comprehensive system membership function for the complex rule **"IF $
   \\min\\left(\\frac{5x-3y+30}{15}, \\frac{10-z}{2}\\right) & 0 \\le x \\le 3, \\; 5 \\le y \\le 10, \\; 8 \\le z \\le 10 \\\\ 
   \\frac{z-3}{5} & 3 \\le x \\le 5, \\; 0 \\le y \\le 10, \\; 3 \\le z \\le 8 \\\\ 
   \\frac{10-z}{2} & 3 \\le x \\le 5, \\; 0 \\le y \\le 10, \\; 8 \\le z \\le 10 \\\\ 
-  \\min\\left(\\frac{40-5x+3y}{15}, \\frac{z-3}{5}\\right) & 5 \\le x \\le 8, \\; 0 \\le y \\le 5, \\; 3 \\le z \\le 8 \\\\ 
+  \\min\\left(\\frac{40-5x+3y}{15}, \\frac{z-3}{5}\\right) & 5 \\le x \\le 8, \\; 0 \\le y \\le 5, \; 3 \\le z \\le 8 \\\\ 
   \\min\\left(\\frac{40-5x+3y}{15}, \\frac{10-z}{2}\\right) & 5 \\le x \\le 8, \\; 0 \\le y \\le 5, \\; 8 \\le z \\le 10 \\\\ 
   \\min\\left(\\frac{70-5x-3y}{15}, \\frac{z-3}{5}\\right) & 5 \\le x \\le 8, \\; 5 \\le y \\le 10, \\; 3 \\le z \\le 8 \\\\ 
   \\min\\left(\\frac{70-5x-3y}{15}, \\frac{10-z}{2}\\right) & 5 \\le x \\le 8, \\; 5 \\le y \\le 10, \\; 8 \\le z \\le 10 \\\\
