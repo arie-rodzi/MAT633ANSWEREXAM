@@ -169,39 +169,42 @@ Using the Dienes-Rescher implication $\mu_{Q_D}(x, y) = \max(1 - \mu_{\text{FP}_
   0 & \text{otherwise} 
   \end{cases}$$"""
     },
-    {
+   {
         "question_no": "Question 3(c)",
         "topic": "Yager-Mamdani Relational Profile Synthesis",
-        "question": r"""[Sila letak teks soalan 3(c) anda di sini]""",
+        "marks": "10",
+        "question": r"""Let $A$, $B$, and $C$ be fuzzy sets defined on continuous universes. 
+
+Obtain the fuzzy relation membership function for the rule **"IF $x$ is $A$ or $y$ is $B$, THEN $z$ is $C$"** by applying the Yager s-norm ($w=1$) for the antecedent union, and the Mamdani Minimum Implication operator for the fuzzy relation.""",
         "answer": r"""**SUGGESTED ANSWER:**
 
-**Step 1: Determine the compound antecedent ($A \cup B$) via Yager s-norm ($w=1$)**
-When $w=1$, the expression yields the bounded sum operator: $\min(1, \mu_A(x) + \mu_B(y))$.
+**Step 1: Determine the compound antecedent $(A \cup B)$ via Yager s-norm ($w=1$)**
+When $w=1$, the Yager s-norm simplifies directly to the bounded sum operator: $\min(1, \mu_A(x) + \mu_B(y))$.
 
-$$\mu_{A \cup B}(x,y) = \begin{cases} 
-\frac{5x+3y}{15} &; 0 \le x \le 3, \; 0 \le y \le 5 \\\\ 
-\frac{5x-3y+30}{15} &; 0 \le x \le 3, \; 5 \le y \le 10 \\\\ 
-1 &; 3 \le x \le 5, \; 0 \le y \le 10 \\\\ 
-\frac{40-5x+3y}{15} &; 5 \le x \le 8, \; 0 \le y \le 5 \\\\ 
-\frac{70-5x-3y}{15} &; 5 \le x \le 8, \; 5 \le y \le 10 
-\end{cases}$$
+$$\mu_{A \cup B}(x,y) = \left\{ \begin{array}{ll} 
+\frac{5x+3y}{15} & \text{if } 0 \le x \le 3, \; 0 \le y \le 5 \\\\ 
+\frac{5x-3y+30}{15} & \text{if } 0 \le x \le 3, \; 5 \le y \le 10 \\\\ 
+1 & \text{if } 3 \le x \le 5, \; 0 \le y \le 10 \\\\ 
+\frac{40-5x+3y}{15} & \text{if } 5 \le x \le 8, \; 0 \le y \le 5 \\\\ 
+\frac{70-5x-3y}{15} & \text{if } 5 \le x \le 8, \; 5 \le y \le 10 
+\end{array} \right.$$
 
-**Step 2: Embed using the Mamdani Min Implication Rule:**
-$$\mu_R(x,y,z) = \min[\mu_{A \cup B}(x,y), \, \mu_C(z)]$$
+**Step 2: Embed using the Mamdani Min Implication Rule**
+The relation is constructed via $\mu_R(x,y,z) = \min[\mu_{A \cup B}(x,y), \, \mu_C(z)]$. Combining the piecewise regions yields:
 
-$$\mu_R(x,y,z) = \begin{cases} 
-\min\left(\frac{5x+3y}{15}, \frac{z-3}{5}\right) &; 0 \le x \le 3, \; 0 \le y \le 5, \; 3 \le z \le 8 \\\\ 
-\min\left(\frac{5x+3y}{15}, \frac{10-z}{2}\right) &; 0 \le x \le 3, \; 0 \le y \le 5, \; 8 \le z \le 10 \\\\ 
-\min\left(\frac{5x-3y+30}{15}, \frac{z-3}{5}\right) &; 0 \le x \le 3, \; 5 \le y \le 10, \; 3 \le z \le 8 \\\\ 
-\min\left(\frac{5x-3y+30}{15}, \frac{10-z}{2}\right) &; 0 \le x \le 3, \; 5 \le y \le 10, \; 8 \le z \le 10 \\\\ 
-\frac{z-3}{5} &; 3 \le x \le 5, \; 0 \le y \le 10, \; 3 \le z \le 8 \\\\ 
-\frac{10-z}{2} &; 3 \le x \le 5, \; 0 \le y \le 10, \; 8 \le z \le 10 \\\\ 
-\min\left(\frac{40-5x+3y}{15}, \frac{z-3}{5}\right) &; 5 \le x \le 8, \; 0 \le y \le 5, \; 3 \le z \le 8 \\\\ 
-\min\left(\frac{40-5x+3y}{15}, \frac{10-z}{2}\right) &; 5 \le x \le 8, \; 0 \le y \le 5, \; 8 \le z \le 10 \\\\ 
-\min\left(\frac{70-5x-3y}{15}, \frac{z-3}{5}\right) &; 5 \le x \le 8, \; 5 \le y \le 10, \; 3 \le z \le 8 \\\\ 
-\min\left(\frac{70-5x-3y}{15}, \frac{10-z}{2}\right) &; 5 \le x \le 8, \; 5 \le y \le 10, \; 8 \le z \le 10 \\\\ 
-0 &; \text{otherwise} 
-\end{cases}$$"""
+$$\mu_R(x,y,z) = \left\{ \begin{array}{ll} 
+\min\left(\frac{5x+3y}{15}, \frac{z-3}{5}\right) & \text{if } 0 \le x \le 3, \; 0 \le y \le 5, \; 3 \le z \le 8 \\\\ 
+\min\left(\frac{5x+3y}{15}, \frac{10-z}{2}\right) & \text{if } 0 \le x \le 3, \; 0 \le y \le 5, \; 8 \le z \le 10 \\\\ 
+\min\left(\frac{5x-3y+30}{15}, \frac{z-3}{5}\right) & \text{if } 0 \le x \le 3, \; 5 \le y \le 10, \; 3 \le z \le 8 \\\\ 
+\min\left(\frac{5x-3y+30}{15}, \frac{10-z}{2}\right) & \text{if } 0 \le x \le 3, \; 5 \le y \le 10, \; 8 \le z \le 10 \\\\ 
+\frac{z-3}{5} & \text{if } 3 \le x \le 5, \; 0 \le y \le 10, \; 3 \le z \le 8 \\\\ 
+\frac{10-z}{2} & \text{if } 3 \le x \le 5, \; 0 \le y \le 10, \; 8 \le z \le 10 \\\\ 
+\min\left(\frac{40-5x+3y}{15}, \frac{z-3}{5}\right) & \text{if } 5 \le x \le 8, \; 0 \le y \le 5, \; 3 \le z \le 8 \\\\ 
+\min\left(\frac{40-5x+3y}{15}, \frac{10-z}{2}\right) & \text{if } 5 \le x \le 8, \; 0 \le y \le 5, \; 8 \le z \le 10 \\\\ 
+\min\left(\frac{70-5x-3y}{15}, \frac{z-3}{5}\right) & \text{if } 5 \le x \le 8, \; 5 \le y \le 10, \; 3 \le z \le 8 \\\\ 
+\min\left(\frac{70-5x-3y}{15}, \frac{10-z}{2}\right) & \text{if } 5 \le x \le 8, \; 5 \le y \le 10, \; 8 \le z \le 10 \\\\ 
+0 & \text{otherwise} 
+\end{array} \right.$$"""
     },
     {
         "question_no": "Question 4",
