@@ -6,63 +6,92 @@ import data_july2024
 import data_feb2025
 import data_july2025
 
-# 1. Page Configuration Framework (Must be the very first Streamlit command)
+# 1. Page Configuration Framework (Edisi Khas Premium)
 st.set_page_config(
-    page_title="MAT633 Examination Database", 
-    page_icon="📚",
+    page_title="MAT633 Executive Vault", 
+    page_icon="💎",
     layout="wide"
 )
 
-# 2. Premium Global CSS Style Injection (Gradient background & custom styling)
+# 2. Advanced Premium CSS Injection (Midnight Velvet & Liquid Gold Theme)
 st.markdown("""
 <style>
-    /* Menukar warna latar belakang utama dengan tona super clean & soft gradient */
+    /* Latar belakang utama dengan tona minimalis eksklusif */
     .stApp {
-        background: linear-gradient(180deg, #f8fafd 0%, #edf2f9 100%) !important;
+        background: linear-gradient(135deg, #fdfbf7 0%, #f4f7fc 100%) !important;
     }
     
-    /* Mencantikkan Sidebar dengan Glassmorphism effect */
+    /* Transformasi Sidebar dengan Glassmorphic Border Ringan */
     section[data-testid="stSidebar"] {
-        background-color: #ffffff !important;
-        box-shadow: 2px 0px 15px rgba(0,0,0,0.05);
-        border-right: 1px solid #e2e8f0;
+        background-color: #0f172a !important; /* Gelap Premium */
+        box-shadow: 5px 0px 25px rgba(0,0,0,0.15);
+        border-right: 2px solid #e2e8f0;
     }
     
-    /* Mengubahsuai elemen tajuk besar expander */
+    /* Mengubah warna teks dalam sidebar agar putih/emas */
+    section[data-testid="stSidebar"] label, section[data-testid="stSidebar"] p, section[data-testid="stSidebar"] h3 {
+        color: #f1f5f9 !important;
+    }
+    
+    /* Hiasan premium untuk pengepala Expander (Lelaran Lembut) */
     .streamlit-expanderHeader {
         background: #ffffff !important;
         border: 1px solid #e2e8f0 !important;
-        border-radius: 8px !important;
-        font-weight: 600 !important;
-        color: #1e293b !important;
-        transition: all 0.3s ease;
+        border-radius: 12px !important;
+        font-weight: 700 !important;
+        color: #0f172a !important;
+        padding: 14px 18px !important;
+        box-shadow: 0px 4px 12px rgba(0,0,0,0.02) !important;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .streamlit-expanderHeader:hover {
-        border-color: #3b82f6 !important;
-        background: #f8fafc !important;
+        border-color: #d97706 !important; /* Gold Border on Hover */
+        background: #fffbeb !important;
+        transform: translateY(-1px);
     }
 </style>
 """, unsafe_allow_html=True)
 
-# 3. Main Dashboard Headers (Dibalut dengan Gradient Jelas & Moden)
+# 3. Super Wow Master Header with Your Name & Developer Tag
 st.markdown("""
 <div style="
-    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
-    padding: 30px; 
-    border-radius: 16px; 
-    box-shadow: 0px 10px 25px rgba(30, 58, 138, 0.15); 
-    margin-bottom: 25px;
+    background: linear-gradient(135deg, #020617 0%, #0f172a 60%, #1e1b4b 100%);
+    padding: 35px 40px; 
+    border-radius: 24px; 
+    box-shadow: 0px 15px 35px rgba(15, 23, 42, 0.25); 
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border-left: 8px solid #d97706; /* Emas */
 ">
-    <h1 style="color: #ffffff; font-weight: 800; font-size: 32px; margin: 0; letter-spacing: -0.5px;">
-        📚 MAT633 — Fuzzy Set Theory Exam Panel
-    </h1>
-    <p style="color: #93c5fd; font-size: 15px; margin: 8px 0 0 0; font-weight: 400; opacity: 0.9;">
-        Official Universiti Teknologi MARA Database Registry Dashboard
-    </p>
+    <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: #d97706; opacity: 0.1; filter: blur(50px); border-radius: 50%;"></div>
+    
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div>
+            <h1 style="color: #ffffff; font-weight: 900; font-size: 36px; margin: 0; letter-spacing: -1px; font-family: 'Inter', sans-serif;">
+                💎 MAT633 — Intelligence System Analytics
+            </h1>
+            <p style="color: #94a3b8; font-size: 15px; margin: 8px 0 0 0; font-weight: 500;">
+                Advanced Fuzzy Set Theory Core Repository Vault
+            </p>
+        </div>
+        <div style="
+            background: rgba(217, 119, 6, 0.1); 
+            border: 1px solid rgba(217, 119, 6, 0.3);
+            padding: 10px 20px;
+            border-radius: 14px;
+            text-align: right;
+            backdrop-filter: blur(10px);
+            margin-top: 10px;
+        ">
+            <span style="color: #f59e0b; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; display: block;">System Architecture By</span>
+            <span style="color: #ffffff; font-size: 18px; font-weight: 800; letter-spacing: 0.5px;">✨ AMIRUL AMIN ✨</span>
+        </div>
+    </div>
 </div>
 """, unsafe_allow_html=True)
 
-# 4. Session Mapping Array Configuration
+# 4. Data Session Mapping Setup
 session_mapping = {
     "January 2024": data_jan2024.questions,
     "July 2024": data_july2024.questions,
@@ -70,12 +99,14 @@ session_mapping = {
     "July 2025": data_july2025.questions
 }
 
-# 5. Sidebar Controller Architecture
+# 5. Ultra-Modern Sidebar Config
 st.sidebar.markdown("""
-<div style="padding: 10px 0px;">
-    <h3 style="color: #1e293b; font-weight: 700; margin-bottom: 5px;">🧩 Control Center</h3>
-    <p style="color: #64748b; font-size: 13px;">Sila pilih sesi akademik di bawah:</p>
+<div style="padding: 15px 5px; text-align: center; border-bottom: 1px solid #1e293b; margin-bottom: 20px;">
+    <div style="font-size: 40px; margin-bottom: 10px;">🌟</div>
+    <h3 style="margin: 0; font-size: 18px; font-weight: 800; letter-spacing: 0.5px;">AMIRUL'S HUB</h3>
+    <span style="color: #64748b; font-size: 11px; text-transform: uppercase; font-weight: 600;">Secure Access Terminal</span>
 </div>
+<p style="color: #94a3b8; font-size: 12px; font-weight: 500; margin-left: 5px; margin-bottom: 5px;">SELECT REPOSITORY SLOT:</p>
 """, unsafe_allow_html=True)
 
 selected_session = st.sidebar.selectbox(
@@ -85,103 +116,107 @@ selected_session = st.sidebar.selectbox(
 )
 current_questions = session_mapping[selected_session]
 
-# Paparan Sub-Header Sesi Pilihan (Kecerunan Biru Cair Ke Ungu)
+# Sub-Header Slot Aktif (Kecerunan Soft Gold ke Beige)
 st.markdown(f"""
 <div style="
-    background: linear-gradient(90deg, #eff6ff 0%, #f5f3ff 100%);
-    padding: 12px 20px;
-    border-left: 5px solid #3b82f6;
-    border-radius: 0px 12px 12px 0px;
-    margin-bottom: 25px;
+    background: linear-gradient(90deg, #fffbeb 0%, #fafaf9 100%);
+    padding: 14px 24px;
+    border-left: 5px solid #d97706;
+    border-radius: 6px 16px 16px 6px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px rgba(217, 119, 6, 0.03);
 ">
-    <span style="color: #1e3a8a; font-weight: 700; font-size: 18px;">📋 Active Session Slot: {selected_session}</span>
+    <span style="color: #78350f; font-weight: 800; font-size: 16px; letter-spacing: 0.3px;">🗂️ DEPLOYED ARCHIVE SLOT: {selected_session}</span>
 </div>
 """, unsafe_allow_html=True)
 
-# 6. Question Grid Generator Loop
+# 6. Question Core Card Grid Generation Loop
 for idx, q_block in enumerate(current_questions):
     with st.container():
-        col1, col2 = st.columns([1, 2.8])
+        col1, col2 = st.columns([1, 2.7])
         
-        # Meta-information column panel (Left Card)
+        # Left Side: Meta Card (No marks parameters)
         with col1:
             st.markdown(f"""
             <div style="
                 background: #ffffff;
-                padding: 20px;
-                border-radius: 12px;
+                padding: 24px;
+                border-radius: 16px;
                 border: 1px solid #e2e8f0;
-                box-shadow: 0px 4px 6px rgba(0,0,0,0.02);
+                box-shadow: 0px 8px 20px rgba(0,0,0,0.01);
                 height: 100%;
+                border-top: 4px solid #0f172a;
             ">
                 <span style="
-                    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-                    color: white;
-                    padding: 4px 12px;
+                    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+                    color: #f8fafc;
+                    padding: 5px 14px;
                     border-radius: 20px;
-                    font-size: 13px;
-                    font-weight: 700;
+                    font-size: 12px;
+                    font-weight: 800;
                     display: inline-block;
-                    margin-bottom: 15px;
+                    margin-bottom: 20px;
+                    letter-spacing: 0.5px;
+                    box-shadow: 0px 3px 8px rgba(0,0,0,0.08);
                 ">
-                    📌 {q_block['question_no']}
+                    ⚡ {q_block['question_no']}
                 </span>
-                <div style="margin-top: 5px;">
-                    <span style="color: #64748b; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Core Topic Focus</span>
-                    <p style="color: #1e293b; font-size: 14px; font-weight: 600; margin-top: 4px; line-height: 1.4;">{q_block['topic']}</p>
+                <div>
+                    <span style="color: #94a3b8; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 4px;">Fuzzy Domain Matrix</span>
+                    <p style="color: #0f172a; font-size: 15px; font-weight: 700; line-height: 1.4; margin: 0;">{q_block['topic']}</p>
                 </div>
             </div>
             """, unsafe_allow_html=True)
             
-        # Core Content display column panel (Right Card)
+        # Right Side: Content Card
         with col2:
             st.markdown(f"""
             <div style="
                 background: #ffffff;
-                padding: 22px;
-                border-radius: 12px;
+                padding: 26px;
+                border-radius: 16px;
                 border: 1px solid #e2e8f0;
-                box-shadow: 0px 4px 6px rgba(0,0,0,0.02);
+                box-shadow: 0px 8px 20px rgba(0,0,0,0.01);
             ">
-                <h4 style="color: #0f172a; font-weight: 700; margin-top: 0; margin-bottom: 12px; font-size: 16px;">📝 Question Formulation</h4>
+                <h4 style="color: #1e293b; font-weight: 800; margin-top: 0; margin-bottom: 15px; font-size: 16px; letter-spacing: -0.2px;">📝 SYSTEM QUESTION STATEMENT</h4>
             """, unsafe_allow_html=True)
             
-            # Memaparkan soalan (Teks biasa + LaTeX dipaparkan secara selamat di luar HTML)
+            # Paparan Formula/Teks Soalan yang diproses secara selamat di luar ralat merah HTML
             st.markdown(q_block['question'])
             
-            st.markdown("</div>", unsafe_allow_html=True) # Penutup container soalan putih
+            st.markdown("</div>", unsafe_allow_html=True) # Penutup container soalan
             
-            st.markdown("<div style='margin-top: 10px;'></div>", unsafe_allow_html=True)
+            st.markdown("<div style='margin-top: 12px;'></div>", unsafe_allow_html=True)
             
-            # Marking Scheme Toggle Container (Gradient Header + Inside Container)
-            with st.expander("🔓 Display Official Marking Scheme Key Matrix"):
-                # Header hiasan skema jawapan dengan warna gradient hijau-teal
+            # Interactive Answer Panel (Emas/Mewah)
+            with st.expander("🔓 REVEAL RESOLUTION EVALUATION MATRIX"):
                 st.markdown("""
                 <div style="
-                    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
-                    padding: 8px 16px;
-                    border-radius: 8px 8px 0px 0px;
+                    background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+                    padding: 10px 18px;
+                    border-radius: 10px 10px 0px 0px;
                     margin-bottom: 0px;
                 ">
-                    <span style="color: #ffffff; font-weight: 700; font-size: 13px; letter-spacing: 0.5px;">📝 VERIFIED ANSWER MATRIX</span>
+                    <span style="color: #ffffff; font-weight: 800; font-size: 13px; letter-spacing: 0.8px;">⚡ GOLDEN SOLUTION SPECS</span>
                 </div>
                 <div style="
                     background: #ffffff;
-                    padding: 20px;
+                    padding: 24px;
                     border: 1px solid #e2e8f0;
                     border-top: none;
-                    border-radius: 0px 0px 8px 8px;
+                    border-radius: 0px 0px 12px 12px;
+                    box-shadow: 0px 10px 20px rgba(0,0,0,0.02);
                 ">
                 """, unsafe_allow_html=True)
                 
-                # Memaparkan jawapan (Sintaks LaTeX diproses di sini dengan selamat tanpa ralat merah)
+                # Paparan Skema Jawapan Matematik Kompleks Tanpa Sebarang Ralat Merah
                 st.markdown(q_block['answer'])
                 
-                st.markdown("</div>", unsafe_allow_html=True) # Penutup sub-container jawapan
+                st.markdown("</div>", unsafe_allow_html=True) # Penutup container jawapan
                 
-        # Garisan pemisah hiasan yang sangat halus berbanding garisan kasar asal
+        # Garisan pemisah seni abstrak ultra halus
         st.markdown("""
-        <div style="display: flex; justify-content: center; align-items: center; margin: 25px 0;">
-            <div style="height: 1px; width: 100%; background: linear-gradient(to right, rgba(226,232,240,0), rgba(226,232,240,1) 50%, rgba(226,232,240,0));"></div>
+        <div style="display: flex; justify-content: center; align-items: center; margin: 30px 0;">
+            <div style="height: 1px; width: 100%; background: linear-gradient(to right, rgba(217,119,6,0), rgba(217,119,6,0.2) 50%, rgba(217,119,6,0));"></div>
         </div>
         """, unsafe_allow_html=True)
