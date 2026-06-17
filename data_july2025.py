@@ -160,11 +160,11 @@ Using the Dienes-Rescher implication $\mu_{Q_D}(x, y) = \max(1 - \mu_{\text{FP}_
   
   Evaluating across cross-product continuous boundary segments yields:
   $$\mu_{\text{very strong} \rightarrow \text{stable}}(x, y) = \begin{cases} 
-\max\left(1 - \frac{x^2}{4900}, \frac{y}{5}\right) & \text{if } 0 \le x \le 70, \, 0 \le y \le 5 \\\\ 
-1 & \text{if } 0 \le x \le 100, \, 5 \le y \le 10 \\\\ 
-\frac{y}{5} & \text{if } 70 \le x \le 100, \, 0 \le y \le 5 \\\\ 
-0 & \text{otherwise} 
-\end{cases}$$
+  \max\left(1 - \frac{x^2}{4900}, \frac{y}{5}\right) & \text{if } 0 \le x \le 70, \, 0 \le y \le 5 \\\\ 
+  1 & \text{if } 0 \le x \le 100, \, 5 \le y \le 10 \\\\ 
+  \frac{y}{5} & \text{if } 70 \le x \le 100, \, 0 \le y \le 5 \\\\ 
+  0 & \text{otherwise} 
+  \end{cases}$$
     },
     {
         "question_no": "Question 3(c)",
