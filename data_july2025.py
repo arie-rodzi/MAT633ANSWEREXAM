@@ -170,13 +170,7 @@ Using the Dienes-Rescher implication $\mu_{Q_D}(x, y) = \max(1 - \mu_{\text{FP}_
   \end{cases}$$"""
     },
    {
-        "question_no": "Question 3(c)",
-        "topic": "Yager-Mamdani Relational Profile Synthesis",
-        "marks": "10",
-        "question": r"""Let $A$, $B$, and $C$ be fuzzy sets defined on continuous universes. 
-
-Obtain the fuzzy relation membership function for the rule **"IF $x$ is $A$ or $y$ is $B$, THEN $z$ is $C$"** by applying the Yager s-norm ($w=1$) for the antecedent union, and the Mamdani Minimum Implication operator for the fuzzy relation.""",
-        "answer": r"""**SUGGESTED ANSWER:**
+        ""answer": r"""**SUGGESTED ANSWER:**
 
 **Step 1: Determine the compound antecedent $(A \cup B)$ via Yager s-norm ($w=1$)**
 When $w=1$, the Yager s-norm simplifies directly to the bounded sum operator: $\min(1, \mu_A(x) + \mu_B(y))$.
