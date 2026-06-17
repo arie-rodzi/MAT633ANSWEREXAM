@@ -15,7 +15,7 @@ questions = [
 * The atomic fuzzy proposition must be considered as a fuzzy relation. **FALSE**
 * Fuzzy logic provides a foundation for approximate reasoning with imprecise propositions using fuzzy set theory as the principal tool. **TRUE**"""
     },
-  {
+ {
         "question_no": "Question 1(b)",
         "topic": "Structural Propositional Taxonomy",
         "marks": "4",
@@ -26,20 +26,20 @@ questions = [
 Given a fuzzy relation $A \rightarrow B$ in universe $U \times V$ (representing the premise: "IF $x$ is $A$ THEN $y$ is $B$") and a fuzzy relation $B \rightarrow C$ in universe $V \times W$ (representing the premise: "IF $y$ is $B$ THEN $z$ is $C$"), the General Hypothetical Syllogism derives a fuzzy relation $A \rightarrow C$ in universe $U \times W$ representing the valid conclusion: "IF $x$ is $A$ THEN $z$ is $C$".
 
 **Symbolic Framework:**
-$$\begin{array}{ll}
-\text{PREMISE 1:} & \text{IF } X \text{ is } A \text{ THEN } Y \text{ is } B \\\\
-\text{PREMISE 2:} & \text{IF } Y \text{ is } B \text{ THEN } Z \text{ is } C \\\\ \hline
-\text{CONCLUSION:} & \text{IF } X \text{ is } A \text{ THEN } Z \text{ is } C
-\end{array}$$
+* **PREMISE 1:** IF $X$ is $A$ THEN $Y$ is $B$
+* **PREMISE 2:** IF $Y$ is $B$ THEN $Z$ is $C$
+* --------------------------------------------------
+* **CONCLUSION:** IF $X$ is $A$ THEN $Z$ is $C$
 
 **Demonstrative Example:**
 * **Premise 1:** IF today is Cloudy, THEN the room temperature is Cool.
 * **Premise 2:** IF the room temperature is Cool, THEN the air conditioner usage is Low.
 * **Conclusion:** IF today is Cloudy, THEN the air conditioner usage is Low."""
     },
-    {
+   {
         "question_no": "Question 2(a)",
         "topic": "Syntactic Logical Composition Combinations",
+        "marks": "4",
         "question": r"""Let $A$, $B$, and $C$ be fuzzy sets. Determine the membership function for the following fuzzy proposition where "and", "or", and "not" are defined by the basic fuzzy operations:
 
 $$\text{"Not } (a \text{ is } A \text{ or } b \text{ is } B) \text{ and } (a \text{ is not } A \text{ or } c \text{ is } C)\text{"}$$""",
@@ -47,10 +47,7 @@ $$\text{"Not } (a \text{ is } A \text{ or } b \text{ is } B) \text{ and } (a \te
 
 Using standard operators where intersection uses minimum, union uses maximum, and complement uses standard negation:
 
-$$\begin{aligned}
-\mu_{(A \lor B)' \land (A' \lor C)}(a,b,c) &= \min\left[ \mu_{(A \lor B)'}(a,b), \, \mu_{A' \lor C}(a,c) \right] \\\\
-&= \min\left[ 1 - \max(\mu_A(a), \mu_B(b)), \, \max(1 - \mu_A(a), \mu_C(c)) \right]
-\end{aligned}$$"""
+$$\mu(a,b,c) = \min\left[ 1 - \max(\mu_A(a), \mu_B(b)), \max(1 - \mu_A(a), \mu_C(c)) \right]$$"""
     },
     {
         "question_no": "Question 2(b)(i)",
